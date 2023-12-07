@@ -10,9 +10,10 @@
     
     <insert id="join" parameterType="com.pyb.vo.MemberVO">
         INSERT INTO member 
-        ( member_id, member_name )
+        ( member_id, member_name, member_pw, member_gender, member_phone)
         VALUES
-        ( #{memberId}, #{memberName} )
+        ( #{memberId}, #{memberName}, #{memberPw}, #{memberGender}, #{memberPhone} )
     </insert>
     
 </mapper>
+

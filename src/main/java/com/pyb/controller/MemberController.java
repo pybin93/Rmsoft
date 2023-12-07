@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -48,9 +49,9 @@ public class MemberController {
 		// 3) DB INSERT
 		memberService.join(memberVo);
 		
-		
 		result.put("result", "success");
 		
 		return result;
 	}
+
 }

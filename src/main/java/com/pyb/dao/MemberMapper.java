@@ -7,7 +7,8 @@ import com.pyb.vo.MemberVO;
 @Mapper
 public interface MemberMapper {
 	
-    void join(MemberVO memberVo);
+   public void join(MemberVO memberVo);
 
-	int checkJoin(MemberVO memberVo);
+   public int checkJoin(MemberVO memberVo);
+
 }
