@@ -19,11 +19,7 @@ public class MemberController {
 	@Autowired
 	MemberService memberService;
 
-	@GetMapping("/hello")
-	public String hello() {
-		return "Hello, pyb!";
-	}
-	
+	//회원가입
 	@PostMapping("/join")
 	public Map<String, Object> join(MemberVO memberVo) {
 		
@@ -50,6 +46,7 @@ public class MemberController {
 		memberService.join(memberVo);
 		
 		result.put("result", "success");
+		result.put("message", "회원가입이 완료되었습니다.");
 		
 		return result;
 	}

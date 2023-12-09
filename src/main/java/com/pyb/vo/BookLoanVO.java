@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class BookLoanVO {
 
-	public int loanNo;
+	public String loanNo;
 	public String loanDate;
 	public String returnDate;
-	public int bookNo;
+	public String bookNo;
 	public String memberId;
-	public int getLoanNo() {
+	public String getLoanNo() {
 		return loanNo;
 	}
-	public void setLoanNo(int loanNo) {
+	public void setLoanNo(String loanNo) {
 		this.loanNo = loanNo;
 	}
 	public String getLoanDate() {
@@ -27,10 +27,10 @@ public class BookLoanVO {
 	public void setReturnDate(String returnDate) {
 		this.returnDate = returnDate;
 	}
-	public int getBookNo() {
+	public String getBookNo() {
 		return bookNo;
 	}
-	public void setBookNo(int bookNo) {
+	public void setBookNo(String bookNo) {
 		this.bookNo = bookNo;
 	}
 	public String getMemberId() {
@@ -45,4 +45,5 @@ public class BookLoanVO {
 		return "BookLoanVO [loanNo=" + loanNo + ", loanDate=" + loanDate + ", returnDate=" + returnDate + ", bookNo="
 				+ bookNo + ", memberId=" + memberId + "]";
 	}
+	
 }

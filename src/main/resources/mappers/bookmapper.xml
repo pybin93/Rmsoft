@@ -3,11 +3,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.pyb.dao.BookMapper">
-
-    <select id="checkBook" parameterType="com.pyb.vo.BookVO" resultType="int">
-        SELECT count(1) FROM book WHERE book_no = #{bookNo}
-    </select>
     
+    <!-- 도서 등록 -->
     <insert id="insert" parameterType="com.pyb.vo.BookVO">
         INSERT INTO book 
         (title, writer, publisher, publication_year, status)
@@ -15,11 +12,68 @@
         (#{title}, #{writer}, #{publisher}, #{publicationYear}, 'READY')
     </insert>
     
-    <select id="selectAll" parameterType="com.pyb.vo.BookVO">
-    	SELECT * from book
+
+    <!-- 도서 정보 수정 -->   
+    <update id="update" parameterType="com.pyb.vo.BookVO">
+	    UPDATE book
+	    SET title = #{title}, 
+	    	writer = #{writer}, 
+	    	publisher = #{publisher}, 
+	        publication_year = #{publicationYear}
+	    WHERE book_no = #{bookNo}
+	</update>
+        
+    <!-- 도서 대출 이력 조회 -->
+    <select id="loanHistory" parameterType="String" resultType="com.pyb.vo.BookLoanVO">
+	    SELECT * FROM book_loan 
+	    WHERE book_no = #{bookNo} 
+	    ORDER BY loan_date DESC
+	</select>
+    
+    
+    <!-- 도서 대출 처리 -->
+    <insert id="loanBook" parameterType="com.pyb.vo.BookLoanVO">
+   		INSERT INTO book_loan
+        (loan_date, return_date, member_id, book_no)
+        VALUES
+        ( now(), NULL, #{memberId}, #{bookNo})
+    </insert>
+    
+    
+    <!-- 도서 대출 상태 변경(대출 완료) -->
+    <update id="loanStts" parameterType="com.pyb.vo.BookLoanVO">
+    	UPDATE book
+    	SET status = 'LOAN'
+    	WHERE book_no = #{bookNo}   
+    </update>
+    
+    
+    <!-- 도서 대출 가능 여부 확인 -->
+    <select id="checkLoan" parameterType="com.pyb.vo.BookLoanVO" resultType="int">
+        SELECT count(1) FROM book WHERE book_no = #{bookNo} and status = 'READY'
     </select>
     
-    
+    <!-- 도서 반납 가능 여부 확인 -->
+    <select id="checkReturn" parameterType="com.pyb.vo.BookLoanVO" resultType="int">
+        SELECT count(1) FROM book WHERE book_no = #{bookNo} and status = 'LOAN'
+    </select>
+	
+	
+	<!-- 도서 반납 처리 -->
+	<update id="returnBook" parameterType="com.pyb.vo.BookLoanVO">
+	    UPDATE book_loan
+	    SET return_date = now()
+	  	WHERE book_no = #{bookNo} AND member_id = #{memberId} AND return_date IS NULL
+	</update>
+	
+	
+	<!-- 도서 대출 상태 변경(반납 완료) -->
+	<update id="returnStts" parameterType="com.pyb.vo.BookLoanVO">
+	    UPDATE book
+	    SET status = 'READY'
+	    WHERE book_no = #{bookNo}
+	</update>
+
     
 </mapper>
 
