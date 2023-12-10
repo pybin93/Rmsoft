@@ -19,7 +19,8 @@
 -POSTMAN-
 ![mysql](https://github.com/pybin93/Rmsoft/assets/130011175/529adcc8-f001-4c28-9a5f-37eb976b7b60)
 -MYSQL-
-
+![AWS](https://github.com/pybin93/Rmsoft/assets/130011175/34e05674-fbdb-478d-9e4b-87812b9999ae)
+-AWS-
 ##  구현 기능
 #### 💁‍♂️ 회원
 - 회원가입
