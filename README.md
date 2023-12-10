@@ -17,7 +17,8 @@
 -STS-
 ![postman](https://github.com/pybin93/Rmsoft/assets/130011175/4bb34d4f-d2e3-47d0-86b0-17191c1cb962)
 -POSTMAN-
-
+![mysql](https://github.com/pybin93/Rmsoft/assets/130011175/529adcc8-f001-4c28-9a5f-37eb976b7b60)
+-MYSQL-
 
 ##  구현 기능
 #### 💁‍♂️ 회원
