@@ -13,6 +13,10 @@
 - TEST TOOL : POSTMAN
 - IDE : STS
 - SERVER : AWS (신청은 했는데 실제 소스를 못올림)
+![STS](https://github.com/pybin93/Rmsoft/assets/130011175/b9e7af83-4860-4d11-99fa-4df98eda3c16)
+                                -STS-
+
+
 
 ##  구현 기능
 #### 💁‍♂️ 회원
