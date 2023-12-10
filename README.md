@@ -13,6 +13,7 @@
 - TEST TOOL : POSTMAN
 - IDE : STS
 - SERVER : AWS (신청은 했는데 실제 소스를 못올림)
+
 ![STS](https://github.com/pybin93/Rmsoft/assets/130011175/b9e7af83-4860-4d11-99fa-4df98eda3c16)
 -STS-
 ![postman](https://github.com/pybin93/Rmsoft/assets/130011175/4bb34d4f-d2e3-47d0-86b0-17191c1cb962)
@@ -20,7 +21,11 @@
 ![mysql](https://github.com/pybin93/Rmsoft/assets/130011175/529adcc8-f001-4c28-9a5f-37eb976b7b60)
 -MYSQL-
 ![AWS](https://github.com/pybin93/Rmsoft/assets/130011175/34e05674-fbdb-478d-9e4b-87812b9999ae)
--AWS-
+-AWS- AWS EC2에 접속하여 인스턴스 생성 후 실행
+![PUTTY](https://github.com/pybin93/Rmsoft/assets/130011175/0a3e4c81-b12f-40b2-9d71-8408d43dd176)
+-Linux / SSH - 키페어 생성 후 SSH 접속까지 했지만 환경 설정이나 소스 업로드는 못했습니다. 죄송합니다.\
+
+
 ##  구현 기능
 #### 💁‍♂️ 회원
 - 회원가입
