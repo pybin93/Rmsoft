@@ -26,7 +26,7 @@
 ### - AWS (AWS EC2에 접속하여 인스턴스 생성 후 실행) - 
 ![AWS](https://github.com/pybin93/Rmsoft/assets/130011175/34e05674-fbdb-478d-9e4b-87812b9999ae)
 
-### - Linux / SSH - 키페어 생성 후 SSH 접속까지 했지만 환경 설정이나 소습 업로드 X
+### - Linux / SSH - 키페어 생성 후 SSH 접속까지 했지만 환경 설정이나 소스 업로드 X
 ![PUTTY](https://github.com/pybin93/Rmsoft/assets/130011175/0a3e4c81-b12f-40b2-9d71-8408d43dd176)
 
 
