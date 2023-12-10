@@ -12,7 +12,7 @@
 - 데이터베이스 : MySql
 - TEST TOOL : POSTMAN
 - IDE : STS
-
+- SERVER : AWS (신청은 했는데 실제 소스를 못올림)
 
 ##  구현 기능
 #### 💁‍♂️ 회원
