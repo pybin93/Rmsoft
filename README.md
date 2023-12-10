@@ -10,7 +10,8 @@
 - 자바 버전 : Java 17
 - 프레임 워크 : Spring Boot
 - 데이터베이스 : MySql
-- ERD
+- TEST TOOL : POSTMAN
+- IDE : STS
 
 
 ##  구현 기능
