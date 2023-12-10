@@ -55,9 +55,12 @@ public class BookController {
 	
 	
 	// 도서 대출 이력 확인
-	@GetMapping("/loanHistory/{bookNo}")
+	@GetMapping("/loanHistory")
 	@ResponseBody
-	public Map<String, Object> loanHistory(@PathVariable String bookNo) {
+	public Map<String, Object> loanHistory(String bookNo) {
+		
+		System.out.println(bookNo);
+		
 	    Map<String, Object> result = new HashMap<>();
 	    
 	    // 1) DB SELECT
@@ -65,6 +68,8 @@ public class BookController {
 	    result.put("result", "success");
 	    result.put("loanHistory", loanHistory);
 
+	    
+	    
 	    return result;
 	}
 	

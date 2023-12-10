@@ -25,7 +25,12 @@
         
     <!-- 도서 대출 이력 조회 -->
     <select id="loanHistory" parameterType="String" resultType="com.pyb.vo.BookLoanVO">
-	    SELECT * FROM book_loan 
+	    SELECT loan_no AS loanNo 
+	    	 , loan_date AS loanDate
+	    	 , return_date AS returnDate
+	    	 , book_no AS bookNo
+	    	 , member_id AS memberId   
+	    FROM book_loan 
 	    WHERE book_no = #{bookNo} 
 	    ORDER BY loan_date DESC
 	</select>

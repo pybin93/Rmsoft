@@ -1,6 +1,5 @@
 package com.pyb.vo;
 
-import java.util.Date;
 
 public class BookLoanVO {
 
@@ -9,6 +8,7 @@ public class BookLoanVO {
 	public String returnDate;
 	public String bookNo;
 	public String memberId;
+	
 	public String getLoanNo() {
 		return loanNo;
 	}
