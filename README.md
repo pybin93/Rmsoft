@@ -14,8 +14,9 @@
 - IDE : STS
 - SERVER : AWS (신청은 했는데 실제 소스를 못올림)
 ![STS](https://github.com/pybin93/Rmsoft/assets/130011175/b9e7af83-4860-4d11-99fa-4df98eda3c16)
-                                -STS-
-
+-STS-
+![postman](https://github.com/pybin93/Rmsoft/assets/130011175/4bb34d4f-d2e3-47d0-86b0-17191c1cb962)
+-POSTMAN-
 
 
 ##  구현 기능
