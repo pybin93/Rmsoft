@@ -27,7 +27,7 @@ public class MemberController {
 		
 		System.out.println(memberVo);
 		
-		// 1) ID가 빈값일 경우
+		// 1) ID가 빈값일 경우 
 		if (!StringUtils.hasText(memberVo.getMemberId())) {
 			result.put("result", "fail");
 			result.put("message", "ID가 빈값입니다.");

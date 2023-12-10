@@ -4,10 +4,12 @@
 
 <mapper namespace="com.pyb.dao.MemberMapper">
 
+	<!-- ID 중복 확인 -->
     <select id="checkJoin" parameterType="com.pyb.vo.MemberVO" resultType="int">
         SELECT count(1) FROM member WHERE member_id = #{memberId}
     </select>
     
+    <!-- 회원가입 -->
     <insert id="join" parameterType="com.pyb.vo.MemberVO">
         INSERT INTO member 
         ( member_id, member_name, member_pw, member_gender, member_phone)

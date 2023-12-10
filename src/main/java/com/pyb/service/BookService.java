@@ -21,6 +21,14 @@ public class BookService {
 		mapper.insert(bookVo);
 	}
 
+	public void update(BookVO bookVo) {
+		mapper.update(bookVo);
+	}
+	
+	public List<BookLoanVO> loanHistory(String bookNo) {
+		return mapper.loanHistory(bookNo);
+	}
+	
 	public void loanBook(BookLoanVO bookloanVo) {
 		mapper.loanBook(bookloanVo);
 		mapper.loanStts(bookloanVo);
@@ -34,19 +42,10 @@ public class BookService {
 		return mapper.checkReturn(bookloanVo);
 	}
 
-	public void update(BookVO bookVo) {
-		 mapper.update(bookVo);
-	}
 
 	public void returnBook(BookLoanVO bookloanVo) {
 		 mapper.returnBook(bookloanVo);
 		 mapper.returnStts(bookloanVo);
 	}
-
-	public List<BookLoanVO> loanHistory(String bookNo) {
-		return mapper.loanHistory(bookNo);
-	}
-
-
 
 }

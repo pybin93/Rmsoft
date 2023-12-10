@@ -13,6 +13,10 @@ public interface BookMapper {
 	public int checkBook(BookVO bookVo);
 
 	public void insert(BookVO bookVo);
+	
+	public void update(BookVO bookVo);
+	
+	public List<BookLoanVO> loanHistory(String bookNo);
 
 	public void loanBook(BookLoanVO bookloanVo);
 
@@ -22,12 +26,9 @@ public interface BookMapper {
 
 	public int checkReturn(BookLoanVO bookloanVo);
 
-	public void update(BookVO bookVo);
-
 	public void returnBook(BookLoanVO bookloanVo);
 
 	public void returnStts(BookLoanVO bookloanVo);
 
-	public List<BookLoanVO> loanHistory(String bookNo);
 
 }
